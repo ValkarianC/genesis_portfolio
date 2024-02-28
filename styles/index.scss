@@ -1,6 +1,7 @@
 @use 'fonts';
 
 @import 'navigation';
+@import 'content';
 
 body {
     font-family: fonts.$main-font;
@@ -18,6 +19,7 @@ header {
 
 main {
     grid-area: 2/2/3/3;
+    margin-top: 2vh;
 }
 
 footer {
@@ -25,4 +27,8 @@ footer {
     font-weight: fonts.$bold;
     font-size: 18px;
 
+}
+
+.emphasis {
+    color: fonts.$emphasis-colour;
 }
