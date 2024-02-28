@@ -20,6 +20,8 @@ header {
 main {
     grid-area: 2/2/3/3;
     margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {

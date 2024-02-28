@@ -4,15 +4,19 @@ h1{
     font-size: 40px;
     font-weight: fonts.$bold;
 }
+
 .card {
     width: 100%;
+    margin: 2vh 0;
 
     &__introduction{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10vh;
 
         &_left{
             max-width: 640px;
+            line-height: 60px;
         }
 
         &_right {
@@ -26,4 +30,39 @@ h1{
             }
         }
     }
+
+    &__gallery{
+
+        &_container{
+            margin: 10vh 0;
+            display: grid;
+            grid-template-columns: 0.6fr 0.8fr 0.8fr 0.8fr 0.6fr;
+            grid-template-rows: 1fr;
+        }
+
+        &_column{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 5px;
+
+            img{
+                margin: 10px 0;
+            }
+        }
+
+
+    }
+}
+
+#column-left{
+    grid-area: 1/2/2/3;
+}
+
+#column-center{
+    grid-area: 1/3/2/4;
+}
+
+#column-right{
+    grid-area: 1/4/2/5;
 }
