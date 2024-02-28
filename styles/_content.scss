@@ -3,31 +3,53 @@
 h1{
     font-size: 40px;
     font-weight: fonts.$bold;
+    line-height: 60px;
+}
+
+h2{
+    font-size: 28px;
+    font-weight: fonts.$bold;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: fonts.$bold;
+}
+
+h4{
+    font-size: 18px;
+    font-weight: fonts.$bold;
 }
 
 .card {
     width: 100%;
     margin: 2vh 0;
 
-    &__introduction{
+    &__split-text{
         display: flex;
         justify-content: space-between;
         margin-bottom: 10vh;
 
         &_left{
             max-width: 640px;
-            line-height: 60px;
         }
 
         &_right {
-            width: 25%;
+            width: 50%;
             align-self: flex-end;
+            display: flex;
+            justify-content: center;
 
             hr{
-                float:left;
                 width: 2vw;
                 margin: 0;
+                transform: translateX(2vw);
             }
+        }
+
+        li {
+            list-style: none;
+            margin: 10px;
         }
     }
 
@@ -47,11 +69,15 @@ h1{
             margin: 0 5px;
 
             img{
-                margin: 10px 0;
+                margin: 10px 0 0 0;
             }
+        }    
+    }
+
+    &__awards{
+        hr{
+            color: #979797;
         }
-
-
     }
 }
 
@@ -65,4 +91,43 @@ h1{
 
 #column-right{
     grid-area: 1/4/2/5;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.3fr 0.3fr 0.08fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    margin: 7vh 0;
+    
+    &__title {
+        grid-area: 1/1/2/2;
+    }
+
+    &__subtitle {
+        &_top{
+            grid-area: 1/2/2/3;
+        }
+        &_bottom {
+            grid-area: 2/2/3/3;
+        }
+    }
+
+    &__description{
+        &_top{
+            grid-area: 1/3/2/4;
+        }
+        &_bottom{
+            grid-area: 2/3/3/4;
+        }
+    }
+
+    &__date{
+        &_top{
+            grid-area: 1/5/2/6;
+        }
+        &_bottom{
+            grid-area: 2/5/3/6;
+        }
+    }
 }
