@@ -62,5 +62,12 @@
     &__link{
         text-decoration: none;
         color: inherit;
+        padding: 5px;
+    }
+
+    &__link:hover{
+        color: fonts.$emphasis-colour;
+        background-color: #bdbdbd;
+        border-radius: 5px;
     }
 }
