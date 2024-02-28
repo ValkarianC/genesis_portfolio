@@ -6,15 +6,26 @@
         display: flex;
         align-items: center;
     }
+
         
     &__list{
         display: grid;
-        grid-template-columns: 0.3fr 2.8fr 0.2fr 0.2fr;
         grid-template-rows: 0.1fr;
+
         list-style: none;
         grid-gap: 15px;
         padding: 0;
         width: 100%;
+
+        &_header{
+            grid-template-columns: 0.3fr 2.8fr 0.2fr 0.2fr;
+
+        }
+
+        &_footer {
+            grid-template-columns: 0.3fr 2.1fr 0.2fr 0.2fr 0.2fr 0.05fr 0.05fr 0.05fr;
+
+        }
     }
 
     &__li{
@@ -33,6 +44,18 @@
     
         &_contact{
             grid-area: 1/4/2/5;
+        }
+
+        &_dribbble{
+            grid-area: 1/6/2/7;
+        }
+
+        &_instagram{
+            grid-area: 1/7/2/8;
+        }
+
+        &_twitter{
+            grid-area: 1/8/2/9;
         }
     }   
 
