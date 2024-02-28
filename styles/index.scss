@@ -1,0 +1,17 @@
+@use 'fonts';
+
+@import 'navigation';
+
+body {
+    font-family: fonts.$main-font;
+    color: fonts.$main-colour;
+    display: grid;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows:  0.2fr 2.6fr 0.2fr;
+}
+
+header {
+    grid-area: 1/2/2/3;
+    font-weight: fonts.$bold;
+    font-size: 18px;
+}
