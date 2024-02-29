@@ -108,6 +108,10 @@ h4{
         column-gap: 2%;
         margin-bottom: 10vh;
     }
+
+    &__map{
+        height: 570px;
+    }
 }
 
 .table {
@@ -275,6 +279,13 @@ h4{
     border: none;
     max-width: 125px;
     width: 100%;
+    max-height: 50px;
+    font-weight: fonts.$bold;
+}
+
+.button:hover{
+    background-color: #979797;
+    color: fonts.$emphasis-colour;
 }
 
 .grey-text {
