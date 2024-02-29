@@ -3,7 +3,7 @@
 h1{
     font-size: 40px;
     font-weight: fonts.$bold;
-    line-height: 60px;
+    line-height: 3.5rem;
 }
 
 h2{
@@ -31,7 +31,13 @@ h4{
         margin-bottom: 10vh;
 
         &_left{
-            max-width: 640px;
+            max-width: 635px;
+            width: 100%;
+
+            p{
+                margin-bottom: 2rem;
+                transform: translateY(2rem);
+            }
         }
 
         &_right {
@@ -40,7 +46,7 @@ h4{
             display: flex;
             justify-content: center;
 
-            hr{
+            #accent-line{
                 width: 2vw;
                 margin: 0;
                 transform: translateX(2vw);
@@ -79,18 +85,22 @@ h4{
             color: #979797;
         }
     }
-}
 
-#column-left{
-    grid-area: 1/2/2/3;
-}
+    &__projects-image, &__text {
+        max-width: 1110px;
+        margin-bottom: 7vh;
+        line-height: 2.3rem;   
+    }
 
-#column-center{
-    grid-area: 1/3/2/4;
-}
 
-#column-right{
-    grid-area: 1/4/2/5;
+    &__projects-gallery {
+        max-width: 1110px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 2%;
+        margin-bottom: 10vh;
+    }
 }
 
 .table {
@@ -130,4 +140,104 @@ h4{
             grid-area: 2/5/3/6;
         }
     }
+}
+
+.projects-table {
+    display: flex;
+    justify-content: flex-end;
+
+    &__container{
+        font-weight: fonts.$bold;
+        font-size: 18px;
+        line-height: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(12, 0.5fr);
+
+    }
+    &__category {
+        &_one{
+            grid-area: 1/1/2/2;
+        }
+        &_two{
+            grid-area: 3/1/4/2;
+        }
+        &_three{
+            grid-area: 5/1/6/2;
+        }
+        &_four{
+            grid-area: 7/1/8/2;
+        }
+        &_five{
+            grid-area: 9/1/10/2;
+        }
+        &_six{
+            grid-area: 11/1/12/2;
+        }
+    }
+
+    &__entry{
+        &_one{
+            grid-area: 1/2/2/3;
+        }
+        &_two{
+            grid-area: 3/2/4/3;
+        }
+        &_three{
+            grid-area: 5/2/6/3;
+        }
+        &_four{
+            grid-area: 7/2/8/3;
+        }
+        &_five{
+            grid-area: 9/2/10/3;
+        }
+        &_six{
+            grid-area: 11/2/12/3;
+        }
+    }
+
+    &__break{
+        color: #979797;
+
+        &_one{
+            grid-area: 2/1/3/3;
+        }
+        &_two{
+            grid-area: 4/1/5/3;
+        }
+        &_three{
+            grid-area: 6/1/7/3;
+        }
+        &_four{
+            grid-area: 8/1/9/3;
+        }
+        &_five{
+            grid-area: 10/1/11/3;
+        }
+        &_six{
+            grid-area: 12/1/13/3;
+        }
+    }
+
+}
+
+.grey-text {
+    opacity: 60%;;
+}
+
+#column-left{
+    grid-area: 1/2/2/3;
+}
+
+#column-center{
+    grid-area: 1/3/2/4;
+}
+
+#column-right{
+    grid-area: 1/4/2/5;
+}
+
+#projects-title {
+    max-width: 495px;
 }

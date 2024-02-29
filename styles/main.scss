@@ -6,6 +6,7 @@
 body {
     font-family: fonts.$main-font;
     color: fonts.$main-colour;
+    background-color: #f2f2f2;
     display: grid;
     grid-template-columns: 0.2fr 2.6fr 0.2fr;
     grid-template-rows:  0.1fr 2.8fr 0.1fr;
@@ -22,6 +23,7 @@ main {
     margin-top: 2vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 footer {
